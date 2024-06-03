@@ -1,11 +1,11 @@
 package main
 
-import (
-	"fmt"
-	// "math"
-	// "sort"
-	// "strings"
-)
+import "fmt"
+
+// "fmt"
+// "math"
+// "sort"
+// "strings"
 
 // using a function outside of a function
 // func sayGreeting(n string) {
@@ -24,7 +24,23 @@ import (
 // 	return math.Pi * r * r
 // }
 
+// function that return more values
+// func nameInitials(n string) (string, string) {
+// making the whole string capitalize
+// 	s := strings.ToUpper(n)
+// 	names := strings.Split(s, " ")
 
+// 	var initials []string
+// 	for _, v := range names {
+// 		initials = append(initials, v[:1])
+// 	}
+
+// 	if len(initials) > 1 {
+// 		return initials[0], initials[1]
+// 	}
+
+// 	return initials[0], "_"
+// }
 
 func main() {
 
@@ -213,4 +229,49 @@ func main() {
 	// a3 := circleArea(32.4)
 
 	// fmt.Println(a1, a2, a3)
+
+	// function with more values
+	// fn, sn := nameInitials("Bright Olumide")
+	// fmt.Println(fn, sn)
+
+	// fn1, sn1 := nameInitials("Olumide")
+	// fmt.Println(fn1, sn1)
+
+	// greetings(5544)
+
+	// for _, v := range points {
+	// 	fmt.Println(v)
+	// }
+
+	// Maps
+	menu := map[string]float64{
+		"bread": 34.3,
+		"Yam":   32.1,
+		"garri": 3.3,
+		"rice":  10.3,
+	}
+
+	fmt.Println(menu)
+	fmt.Println(menu["rice"])
+
+	// looping through maps
+	for k, v := range menu {
+		fmt.Println(k, " ", v)
+	}
+
+	// in as key value
+	phonebook := map[int]string{
+		23456756454: "bright",
+		34567890:    "tobi",
+		324567554:   "gbemi",
+	}
+
+	fmt.Println(phonebook)
+	fmt.Println(phonebook[324567554])
+
+
+	// updating the value
+	phonebook[324567554] = "emigangan"
+	fmt.Println(phonebook)
+
 }
